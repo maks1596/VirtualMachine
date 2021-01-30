@@ -22,7 +22,7 @@ void Loader::load(Processor &processor, const string &name_file)
 
 		switch (prefix)
 		{
-			case 'k': // Двоичная команда
+			case 'k': // Р”РІРѕРёС‡РЅР°СЏ РєРѕРјР°РЅРґР°
 			{
 				Word data;
 				file.read((char *)&data, sizeof(data));
@@ -31,8 +31,8 @@ void Loader::load(Processor &processor, const string &name_file)
 					data.mc.cmd32.a += m_loadAddress;
 				processor.m_memory[RC++] = data;
 			} break;
-			case 'i': // Целое число
-			case 'f': // Дробное число
+			case 'i': // Р¦РµР»РѕРµ С‡РёСЃР»Рѕ
+			case 'f': // Р”СЂРѕР±РЅРѕРµ С‡РёСЃР»Рѕ
 			{
 				int argumentsAmount = 0;
 				file.read((char *)&argumentsAmount, sizeof(argumentsAmount));
